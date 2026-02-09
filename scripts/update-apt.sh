@@ -32,24 +32,68 @@ curl -fsSL \
   ${GITHUB_TOKEN:+-H "Authorization: Bearer ${GITHUB_TOKEN}"} \
   "$API_URL" > "$WORKDIR/release.json"
 
-ASSET_URL=$(jq -r '.assets[] | select(.name | endswith(".deb")) | .browser_download_url' "$WORKDIR/release.json" | head -n 1)
-if [[ -z "$ASSET_URL" || "$ASSET_URL" == "null" ]]; then
-  echo "No .deb asset found in ${REPO_OWNER}/${REPO_NAME} ${RELEASE_TAG}" >&2
-  exit 1
+TAG_NAME=$(jq -r '.tag_name' "$WORKDIR/release.json")
+VERSION="${TAG_NAME#v}"
+
+DEB_URL=$(jq -r '.assets[] | select(.name | endswith(".deb")) | .browser_download_url' "$WORKDIR/release.json" | head -n 1)
+
+DEB_PATH=""
+if [[ -n "$DEB_URL" && "$DEB_URL" != "null" ]]; then
+  DEB_NAME=$(basename "$DEB_URL")
+  DEB_PATH="$WORKDIR/$DEB_NAME"
+  curl -fsSL -L "$DEB_URL" -o "$DEB_PATH"
+else
+  TAR_URL=$(jq -r '.assets[] | select(.name | contains("unknown-linux-gnu") and endswith(".tar.gz")) | .browser_download_url' "$WORKDIR/release.json" | head -n 1)
+  if [[ -z "$TAR_URL" || "$TAR_URL" == "null" ]]; then
+    echo "No Linux tarball found in release assets" >&2
+    exit 1
+  fi
+  TAR_NAME=$(basename "$TAR_URL")
+  TAR_PATH="$WORKDIR/$TAR_NAME"
+  curl -fsSL -L "$TAR_URL" -o "$TAR_PATH"
+
+  EXTRACT_DIR="$WORKDIR/extract"
+  mkdir -p "$EXTRACT_DIR"
+  tar -xzf "$TAR_PATH" -C "$EXTRACT_DIR"
+  ROOT_DIR=$(find "$EXTRACT_DIR" -maxdepth 1 -type d -name "run-*" | head -n 1)
+  if [[ -z "$ROOT_DIR" ]]; then
+    ROOT_DIR="$EXTRACT_DIR"
+  fi
+
+  PKG_DIR="$WORKDIR/pkg"
+  mkdir -p "$PKG_DIR/DEBIAN" "$PKG_DIR/usr/bin" "$PKG_DIR/usr/share/doc/run"
+
+  install -m 0755 "$ROOT_DIR/run" "$PKG_DIR/usr/bin/run"
+  if [[ -f "$ROOT_DIR/README.md" ]]; then
+    install -m 0644 "$ROOT_DIR/README.md" "$PKG_DIR/usr/share/doc/run/README.md"
+  fi
+  if [[ -f "$ROOT_DIR/LICENSE" ]]; then
+    install -m 0644 "$ROOT_DIR/LICENSE" "$PKG_DIR/usr/share/doc/run/LICENSE"
+  fi
+
+  cat > "$PKG_DIR/DEBIAN/control" <<EOF
+Package: run
+Version: $VERSION
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Esubalew Chekol <esubalewchekol6@gmail.com>
+Depends: libc6 (>= 2.31)
+Description: Universal multi-language runner and smart REPL
+EOF
+
+  DEB_PATH="$WORKDIR/run_${VERSION}_amd64.deb"
+  dpkg-deb --build "$PKG_DIR" "$DEB_PATH" > /dev/null
 fi
 
-DEB_NAME=$(basename "$ASSET_URL")
-
-curl -fsSL -L "$ASSET_URL" -o "$WORKDIR/$DEB_NAME"
-
-VERSION=$(dpkg-deb -f "$WORKDIR/$DEB_NAME" Version)
-ARCH=$(dpkg-deb -f "$WORKDIR/$DEB_NAME" Architecture)
+VERSION=$(dpkg-deb -f "$DEB_PATH" Version)
+ARCH=$(dpkg-deb -f "$DEB_PATH" Architecture)
 
 POOL_DIR="$DOCS_DIR/pool/main/r/run"
 DIST_DIR="$DOCS_DIR/dists/$DIST/main/binary-$ARCH"
 
 mkdir -p "$POOL_DIR" "$DIST_DIR"
-cp "$WORKDIR/$DEB_NAME" "$POOL_DIR/"
+cp "$DEB_PATH" "$POOL_DIR/"
 
 dpkg-scanpackages --arch "$ARCH" "$DOCS_DIR/pool" > "$DIST_DIR/Packages"
 gzip -9c "$DIST_DIR/Packages" > "$DIST_DIR/Packages.gz"
