@@ -1,0 +1,14 @@
+Package: run
+Version: 0.6.1
+Architecture: amd64
+Maintainer: Esubalew Chekol <esubalewchekol6@gmail.com>
+Depends: libc6 (>= 2.31)
+Filename: docs/pool/main/r/run/run_0.6.1_amd64.deb
+Size: 7293482
+MD5sum: c85c8425a51ce352f4d4d06d9546b3bb
+SHA1: a08a574e7a852d7143777381b1e1cd49ada0bfde
+SHA256: ed7256b084e0dd9ed57d2c4bf555d4ee9c4475e0f2a5db084a520768366ee8a5
+Section: utils
+Priority: optional
+Description: Universal multi-language runner and smart REPL
+

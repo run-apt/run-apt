@@ -1,0 +1,25 @@
+Origin: Run
+Label: Run
+Suite: stable
+Codename: stable
+Date: Mon, 09 Feb 2026 14:48:38 +0000
+Architectures: amd64
+Components: main
+Description: Run apt repository
+Date: Mon, 09 Feb 2026 14:48:38 +0000
+MD5Sum:
+ ca7b0d57d1cb34f3e62d2ab187eddad4              200 Release
+ 97b66995293064b48e2bfc8872b342d8              450 main/binary-amd64/Packages
+ a78dbf6ef2a0011e64c1c884975a6720              362 main/binary-amd64/Packages.gz
+SHA1:
+ a84702ae58fab9eced4275bfa80b99ff358938f4              200 Release
+ c34b96a076f529072c8c4ffee7e5fd854fa827c2              450 main/binary-amd64/Packages
+ 9b63a2f6e546d456ecf286169908d905a08e9931              362 main/binary-amd64/Packages.gz
+SHA256:
+ 99975fe0934dac8f02b734ce2c6f916bae7db361cc81f109da4368774d3f301b              200 Release
+ f4128f84fdb82b546f8db93dd1c8a6e630eaa3cd872a6350080711157436be32              450 main/binary-amd64/Packages
+ d35c8639c8def628ae28937c6034cb9017c2086a224e88465f4988151dd4f5df              362 main/binary-amd64/Packages.gz
+SHA512:
+ 45ef5ec39886025a7afb0eb9fa698ebc1987137735d7adf28bc5bce3e161896d239781ac95d5975f4fd7c436bf7220081cc068308963cfde35d3f8076e9c5834              200 Release
+ d12362d43582c7a6c474fe16d20e4b128e8bfa6183b6947ed4c0267045e72e6030505dbf6b6f2a831e40ec947c2a692e2ce2a1b84cf585549c35fcb7ee282090              450 main/binary-amd64/Packages
+ c9747787aaeb36e3894668464541e00c6c5ed96464e1f0afd2b47b49efd6a3930946587963ccad408d71e8c3b652b1e376924eca66255d32585090d15dde0d89              362 main/binary-amd64/Packages.gz
