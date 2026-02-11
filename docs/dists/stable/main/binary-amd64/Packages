@@ -12,3 +12,21 @@ Section: utils
 Priority: optional
 Description: Universal multi-language runner and smart REPL
 
+Package: run-kit
+Version: 0.7.0-1
+Architecture: amd64
+Maintainer: Esubalew Chekol <esubalewchekol6@gmail.com>
+Installed-Size: 21006
+Depends: libc6 (>= 2.31)
+Filename: pool/main/r/run/run-kit_0.7.0-1_amd64.deb
+Size: 5922780
+MD5sum: 79e88358e168995d974e2a4130e0845f
+SHA1: d2a41d02399475fe3596d3ef3b42ba989808b263
+SHA256: d1a6b1ba28639068e2e6c95a8289befba2a9c43ff3e0cf706793dc83c7fa5b81
+Section: utils
+Priority: optional
+Homepage: https://esubalew.et
+Description: Universal multi-language runner and smart REPL
+ Universal multi-language runner and smart REPL with inline snippets, persistent
+ sessions, and support for 20+ languages.
+
