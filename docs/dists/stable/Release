@@ -2,24 +2,24 @@ Origin: Run
 Label: Run
 Suite: stable
 Codename: stable
-Date: Sat, 27 Jun 2026 07:54:39 +0000
+Date: Sat, 27 Jun 2026 10:17:12 +0000
 Architectures: amd64
 Components: main
 Description: Run apt repository
-Date: Sat, 27 Jun 2026 07:54:39 +0000
+Date: Sat, 27 Jun 2026 10:17:12 +0000
 MD5Sum:
- eaf04c69513112eec5b7b3bb48135212              200 Release
+ 8e2e6bf1f48ebc45e257c4580c364e52              200 Release
  db521d37fe824411b63a96dfd8018f64             1077 main/binary-amd64/Packages
- 0f402a305110f3f21f9350a6a8fc1fa8              572 main/binary-amd64/Packages.gz
+ fec540d39250cfcd13d841f725a882cd              572 main/binary-amd64/Packages.gz
 SHA1:
- 6580597c6f7423029eb70802f3a3e71e2baba88d              200 Release
+ a569251c031ed4918d44142450100b3347b1609a              200 Release
  98774daef6f0613f3c474f3020ea49682cfcb536             1077 main/binary-amd64/Packages
- 0ada6b709acb5e4702d5d35de51019694c3bf74b              572 main/binary-amd64/Packages.gz
+ ccb236de2c4e4647a2d2bd78274f1de457e59f8c              572 main/binary-amd64/Packages.gz
 SHA256:
- ee8665628f5630595205579a85679a5a6156c5f90003f9d883f2bf4cc936250a              200 Release
+ 61f2e67c900a2600a5476a2737cc4ade4632da916313daef42186edffbbd8c79              200 Release
  4d752e1f3cbe72b6be343a549c02bd93f6bcba857869e38d250f5cf3af96d374             1077 main/binary-amd64/Packages
- 0257c96b8548ca834d1f930a378d67aa8d6ed804e46249769ec0a99ed744e423              572 main/binary-amd64/Packages.gz
+ ecfb72d0481f1735b7373a85a531b050471885b77e179378fbc042084768fd39              572 main/binary-amd64/Packages.gz
 SHA512:
- 9a2c4a2ffff1dc0f3d57f0cf170e4daa6a0dd7a174079bf863b47f9b57c581e04a46dec92a770e97e65c44bb320dd13514feb77d037e1cbe14c684aae3e06136              200 Release
+ 15b75b8811e0264e57bf339251385705629387ddfc2de5fc402bda27aed22cb66a6c63de700341b5fbe09b4b4bcad1e1b401dcfb03ae58d68285bf92aa9f7898              200 Release
  045e95dbebc139a6a012146c7965657402f2204de1cb97862436c30f0368481d67f5fcd300580e8fda491c0bd3f1408874453224737e59ef7735f056c08f4f73             1077 main/binary-amd64/Packages
- f649aa6197c97f104ba891515e524e6edcc2d3553f19ca91857f76a4ae73dcc1a06ddf1ef713da2a8a5c30a6518dca2192c5a17168b74416c9a832c94198972b              572 main/binary-amd64/Packages.gz
+ ccaaa0f0a98476b6cf925c7bf10cc7a768c6f1efb565597e8786217b58531f245de653257e3afcbd59f964c8467dbc79518992b7cafbc9948935844267628eaf              572 main/binary-amd64/Packages.gz
