@@ -5,40 +5,40 @@ Origin: Run
 Label: Run
 Suite: stable
 Codename: stable
-Date: Sun, 05 Jul 2026 05:02:14 +0000
+Date: Sun, 05 Jul 2026 09:16:39 +0000
 Architectures: amd64
 Components: main
 Description: Run apt repository
-Date: Sun, 05 Jul 2026 05:02:14 +0000
+Date: Sun, 05 Jul 2026 09:16:39 +0000
 MD5Sum:
- 8e93070a612c37dc159fe27c28d34d65              200 Release
+ 04b2ca02b753356cc23b09a09f1b9472              200 Release
  db521d37fe824411b63a96dfd8018f64             1077 main/binary-amd64/Packages
- 90a13d587682107da5a5d3441872e98e              572 main/binary-amd64/Packages.gz
+ af9bf210febfb38bf4e4be1e997ccf65              572 main/binary-amd64/Packages.gz
 SHA1:
- cecae0fc2e4fbc21d7de56a5df1fa50bf4e82bcc              200 Release
+ f3a91dbb8979979e631be9dfec526dafc4252e7a              200 Release
  98774daef6f0613f3c474f3020ea49682cfcb536             1077 main/binary-amd64/Packages
- 5ba78bb0679510069a2f24f43dd943d2d5e6ea9e              572 main/binary-amd64/Packages.gz
+ bacf82aeef02568d76486c3f23bce1f5c2f3878f              572 main/binary-amd64/Packages.gz
 SHA256:
- 4ce1d98c89d70a28348c11d2ba1f007d7cd8d24296e4f2875376022e2cae0934              200 Release
+ 7708e54b5fa4359c8b15b85fbe1dd8df0e285f35614255b549487219abf47253              200 Release
  4d752e1f3cbe72b6be343a549c02bd93f6bcba857869e38d250f5cf3af96d374             1077 main/binary-amd64/Packages
- 2d4442e8dd21e306b26b231e71d30136ea187179c143c5436e385af142d33232              572 main/binary-amd64/Packages.gz
+ 34460213f94abf12ddd7f7f82e0363eca6852677b69ccefb27d570a9091cb049              572 main/binary-amd64/Packages.gz
 SHA512:
- 94bd0497aa69421bb87ed9fffd09fe6ed775858d92a0f37a09c5c79227469bf4e94bcd1ac61932e750c306c6eddd1a1ae257b8316b1bcb975ce2674d39b2d3dd              200 Release
+ 6a32485fe4e0a0db96fa9e4c6667dbbea75a27984636a03550510564b8be07971f78f716f5fa26ff90fcaa73a943fe6e12a8c90b6c914e12e6dacb2874b6fa1b              200 Release
  045e95dbebc139a6a012146c7965657402f2204de1cb97862436c30f0368481d67f5fcd300580e8fda491c0bd3f1408874453224737e59ef7735f056c08f4f73             1077 main/binary-amd64/Packages
- ab01414a81a60ada1e0a207d165cef4dad408e649e644f8580309737421b204dea1443306ed3a33a722caced450ccfa9011478da1ddf6264fdbf1ae4d32e60e7              572 main/binary-amd64/Packages.gz
+ 27e5c998f74ae3f42e1a625f93e3be901a30b4ad86fdaa2f15b2436a815ba3f3db6c3f65724090c1e0d7f087ea37951b4392905602a0209eeac21f80a14e5591              572 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEK93HxBTdoYsEDIDigpLk+9HS0LcFAmpJ5VcACgkQgpLk+9HS
-0Le2IA//SHB7jS0wpZ5JSK5HTNNZg1hKFYnXXXfZgbIuLpPhlDEzGmK//MhkDiTu
-KUoBJ8vzAyz93Aiip46Vhp7xrTMu1Qv5pBX5jw2sLHhBpAYPlR8KPuwSqwiN0wbR
-iyQY4up5cnyI39oKNWJGYejte6h0j8hZ42kPZg/TBrjK2OPrNGAMvWvvdNRnaf2F
-K1NaOzFmEiY4Xeqm1eBF9g0KOR2Yk9gZC0YPFpbuJGEnlo0ltJu28kMDxQyu1UhR
-3Cjej0D+HrtYO5sct8w+URcTAESUMzJpwrilW6yTROftB3pjaZsQPaDB/7cWFozN
-pfB34HxG3z9sIdx5pgUDsHS9eTMSHQ1spubqNF6gUbdsuIO20yspGQekQP4P2e3T
-zw3cR0LKR6XAGQg4ndYwZpMBheo6L9wk9CHG15+SwV8fSM1V+heasn1fvmHHOqTy
-pa3LSfc47XA4EpvpskKi8Ha0xkeHyU2vkAJK9YWzb7p5V/3hzeP2w+ETVs54QbOb
-1Xd8j5qRpzdgVrgGJdqFD19laMtyyeE6bK/j029mDtrwWI2ZkSoT/YCUZa/xYAS1
-50UXA+NWS7qIwiMGYYjj9MkIGln1wLvKz3ogR+B+AXb8unrNttuGOmjomkS2msoB
-YbWAvO9z5P966GI6ozCxF3ASFzXKDa2CvlI2Tm7UY7y4i4rAum0=
-=TpUH
+iQIzBAEBCgAdFiEEK93HxBTdoYsEDIDigpLk+9HS0LcFAmpKIPgACgkQgpLk+9HS
+0Ld/7xAAs5rKXCnJlDU6DtT9XGEBQP+7PKntMlwuSC6nNO4vJXbRoQ+Hjfh8vtSD
+yHmelwxBAceQsD2e4TxsB8/ldV6b/6cVecxu9XlGuSRDTqHlF5W8KNT/xr+ka6ZH
+RDdpAmV4JkVWk9FZUtMFMof8IwybWdWwc1/AtFfH0BBNHqmVL2SlldTIg/ZRb3br
+Mp2F0ee6N+ZD14oIHF9wXKHnKnjZOV97dL0KzSnNT4Tm/NlJ6aC0uMIAnecYPIfD
+Wt9icjy7RFDoG9KSrCU3QCiMmwnxmaZhDjBmst4EQMDCkDkG09jGNUHqlAFmm7+p
+LV+S3xmrx6WPOgkZegR/HinDvqTNcYGJBzzzS3Uv4uMcXd/N2FB+gVte7w2cB5a4
+IZlth2fCR5oT+A02o26LY1XXFfK/UjqshKr6D+S/Iyt8Tfr2hCAvDJMRhx6EdmwU
+zHpsBdg9tQrcFJVY6qSOzqw9BI7KjdestxPIe9Lfwx0R4qYFFGnEL9J8oyB/To9m
+WjnCv1ZgxiirF0e51W7+juiPS2khWmJDo7+O4ZRC/wNz2h+amfPB9JUbZyuN3YA+
+qLhdfJKehbefD9uJ3bqrUr2W9wjBmaIiAMgQ0dfcdcAKtC36mKS+jOVo52bgPKc6
+o2puG5muV2ghNr9GdCmPydQElg1bbImJ65WBaZrFCshriVuIDfA=
+=ht2Y
 -----END PGP SIGNATURE-----
